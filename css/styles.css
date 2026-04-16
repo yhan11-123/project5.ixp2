@@ -1,0 +1,539 @@
+/* Variables */
+:root {
+  --text: #FF4B00;
+  --bg: #DDFFFE;
+}
+
+/* global */
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+header {
+  margin: 3.5rem auto 1.5rem auto;
+  text-align: center;
+  padding: 2rem;
+  border-bottom: 2px var(--text) solid;
+  position: relative;
+}
+
+.title-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.spoon-svg {
+  cursor: pointer;
+  height: 4.5rem;
+  width: auto;
+  transform: rotate(-20deg);
+  transform-origin: 50% 50%;
+  user-select: none;
+  flex-shrink: 0;
+  filter: drop-shadow(2px 3px 4px rgba(255,75,0,0.25));
+  transition: filter 0.15s;
+}
+
+.spoon-svg:hover {
+  filter: drop-shadow(3px 4px 8px rgba(255,75,0,0.5));
+}
+
+@media screen and (min-width: 650px) {
+  .spoon-svg {
+    height: 6.5rem;
+  }
+}
+
+.title.wobbling {
+  animation: pudding-wobble 0.9s ease-out;
+  display: inline-block;
+}
+
+@keyframes pudding-wobble {
+  0%   { transform: scale(1,1)    skewX(0deg); }
+  8%   { transform: scale(1.15,0.8) skewX(-6deg); }
+  18%  { transform: scale(0.88,1.18) skewX(5deg); }
+  30%  { transform: scale(1.08,0.92) skewX(-3deg); }
+  42%  { transform: scale(0.96,1.06) skewX(2deg); }
+  54%  { transform: scale(1.03,0.97) skewX(-1deg); }
+  65%  { transform: scale(0.99,1.02) skewX(0.5deg); }
+  76%  { transform: scale(1.01,0.99) skewX(0deg); }
+  88%  { transform: scale(1,1)    skewX(0deg); }
+  100% { transform: scale(1,1)    skewX(0deg); }
+}
+
+header a {
+  text-decoration: none;
+
+
+}
+
+.title{
+    display: inline-block;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+
+  @media screen and (min-width: 650px) {
+    font-size: 4rem;
+  }
+
+   
+}
+
+
+
+.mainspage {
+    margin: 3rem 1.5rem;
+
+    @media screen and (min-width: 650px) {
+      max-width: 72rem;
+    }
+
+}
+
+
+
+.intro {
+    margin: 3rem 1.5rem;
+    display: flex;
+  flex-direction: column;
+
+ @media screen and (min-width: 650px) {
+      max-width: 72rem;
+    }
+
+}
+
+.lead_L {
+
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: left;
+
+    @media screen and (min-width: 650px) {
+   font-size: 5rem;
+  }
+
+}
+
+.lead_R {
+    margin-top: 3rem;
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: right;
+
+     @media screen and (min-width: 650px) {
+   font-size: 5rem;
+  }
+}
+
+.intro_line {
+    margin-top: 5rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-align: right;
+}
+
+.intro_body {
+    padding-top: 2rem;
+    font-weight: 500;
+    font-size: 1rem;
+
+
+    @media screen and (min-width: 650px) {
+      max-width: 25rem;
+      margin-left: auto;
+
+    }
+    
+}
+
+/* vertical menu */
+
+.vertical-menu {
+ padding: 3rem 3rem;
+ margin: 0 auto;
+ place-items: center;
+}
+
+.vertical-menu a {
+  padding: 1.5rem;
+  margin: 2rem 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: --text;
+  display: block;
+  text-decoration: none;
+
+
+    @media screen and (min-width: 650px) {
+    display:inline;
+    align-items: center;
+
+    }
+}
+
+
+/* ingredients */
+
+
+
+.steps {
+  padding-top: 2rem;
+  align-items: center;
+}
+
+.steps_onepot {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pan_steps {
+    padding-top: 2rem;
+  align-items: center;
+}
+
+.container_L {
+  margin-top: 5rem;
+  justify-content: left;
+}
+
+.container_R {
+  margin-top: 5rem;
+  justify-content: right;
+}
+
+.container_Ls {
+  margin-top: 5rem;
+  align-items: center;
+}
+
+.container_Ls .ingredient {
+  flex-direction: row-reverse;
+}
+
+.container_Rs {
+  margin-top: 5rem;
+  justify-content: right;
+    align-items: center;
+}
+
+
+.container_C {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ingredient {
+  display: flex;
+  gap: 1rem;
+}
+
+.ingredient img {
+  max-width: 6rem;    
+  height: auto;
+}
+
+.label {
+  margin: 0;
+   padding: .2rem .2rem;
+   border: 2px var(--text) solid;
+   font-weight: 600;
+   max-height: min-content;
+   
+}
+
+.process_R{
+  align-items: center;
+  padding: 1rem;
+
+  @media screen and (max-width: 650px) {
+     display: flex;
+     flex-direction: column;
+     padding: 0;
+    
+  }
+
+
+}
+
+.pan_steps_body{
+    text-align: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  max-width: 17rem;
+
+  padding: 1rem;
+}
+
+.pan_steps_final {
+    text-align: center;
+  font-weight: 700;
+  font-size: 3rem;
+
+
+  padding: 1rem;
+}
+
+.process_L{
+  align-items: center;
+  padding: 1rem;
+
+ @media screen and (max-width: 650px) {
+       display: flex;
+     flex-direction: column;
+     padding: 0;;
+  }
+
+}
+
+.process_R img {
+  max-width: 18rem;
+  height: auto;
+  
+}
+
+
+
+.process_L img {
+  max-width: 18rem;
+  height: auto;
+ 
+}
+
+.container_C img {
+  max-width: 18rem;
+  height: auto;
+ 
+}
+
+.comments {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  max-width: 17rem;
+
+  padding: 2rem;
+}
+
+
+
+/* popup */
+
+[data-popup-id] {
+  cursor: pointer;
+}
+
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-overlay.active {
+  display: flex;
+}
+
+.popup-box {
+  position: relative;
+  background-color: var(--bg);
+  border: 3px solid var(--text);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  max-width: 18rem;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.popup-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.9rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.popup-img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+}
+
+.popup-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  text-align: left;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* footer */
+footer{
+  height: auto;
+  width: auto;
+  font-family: "Montserrat", sans-serif;
+  padding-top: 2.5rem;
+  color: var(--text-darkmode);
+  border-top: 2px var(--text) solid;
+}
+
+.footer-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-content h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+
+.footer-content p{
+  max-width: 35rem;
+  margin: 1rem auto;
+  line-height: 2rem;
+  font-size: 1rem;
+}
+
+.socials{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+
+.socials li{
+  margin: 0 10px;
+}
+
+.socials a{
+  text-decoration: none; 
+  color: var(--text)
+}
+
+.socials a i {
+  font-size: 1.1rem;
+}
+
+.socials a:hover i{
+  color:var(--text);
+}
+
+.footer-bottom{
+  background: var(--text);
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 1rem;
+  word-spacing: 2px;
+  text-transform: capitalize;
+  color: var(--bg);
+}
+
+.footer-bottom span{
+  text-transform: uppercase;
+  opacity: .4;
+  font-weight: 200;
+}
+
+
+/* ── Wide layout (650px+) ── */
+@media screen and (min-width: 650px) {
+
+
+
+ 
+
+
+  .mainspage {
+    max-width: 700px;
+    margin: 3rem auto;
+  }
+
+  .steps {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container_L {
+    align-self: flex-start;
+  }
+
+  .container_R {
+    align-self: flex-end;
+  }
+
+  .process_L {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .process_R {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .process_L img,
+  .process_R img {
+    max-width: 22rem;
+  }
+
+  .comments {
+    text-align: left;
+    max-width: 18rem;
+    padding: 1rem;
+  }
+
+  /* L containers: image left, label right */
+  .container_L .ingredient,
+  .container_Ls .ingredient {
+    flex-direction: row;
+  }
+
+  /* R containers: label left, image right */
+  .container_R .ingredient,
+  .container_Rs .ingredient {
+    flex-direction: row-reverse;
+  }
+}
