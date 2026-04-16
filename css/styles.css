@@ -363,6 +363,10 @@ header a {
   flex-direction: column;
   align-items: center;
   gap: 1.2rem;
+
+    @media screen and (min-width: 650px) {
+      max-width: 36rem;
+    }
 }
 
 .popup-close {
@@ -382,6 +386,10 @@ header a {
   width: 16rem;
   height: auto;
   border-radius: 0.75rem;
+
+    @media screen and (min-width: 650px) {
+      width: 32rem;
+    }
 }
 
 .popup-text {
@@ -391,6 +399,10 @@ header a {
   text-align: left;
   line-height: 1.6;
   margin: 0;
+
+  @media screen and (min-width: 650px) {
+      font-size: 1.2rem;
+    }
 }
 
 /* footer */
