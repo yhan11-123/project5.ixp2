@@ -328,7 +328,6 @@ header a {
 }
 
 
-
 /* popup */
 
 [data-popup-id] {
@@ -380,7 +379,7 @@ header a {
 }
 
 .popup-img {
-  width: 100%;
+  width: 16rem;
   height: auto;
   border-radius: 0.75rem;
 }
