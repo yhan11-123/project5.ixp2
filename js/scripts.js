@@ -5,52 +5,52 @@
 // ─────────────────────────────────────────────
 var popupData = {
   groundbeef: {
-    img: "mainimage/cow.jpg",
+    img: "mainimage/cow.avif",
     alt: "Ground Beef",
     text: "Ground beef comes from cuts like chuck, round, sirloin, and brisket. Mine was 85% lean, 15% fat. Did this cow roam free on grass or live on grain feed? No idea. I just know it was a lot of meat for a good price."
   },
   mirepoix: {
-    img: "mainimage/Mirepoix.jpg",
+    img: "mainimage/Mirepoix.avif",
     alt: "Mirepoix",
     text: "Look, if you made me eat just carrots and celery on their own, I'd probably hate it. So why does it taste so good when they're all mixed together? I think it's because they melt into the meat and lose their shape. They're sort of there but not really. Honestly, they shine the most when you don't even realize you're eating them."
   },
   tomatopaste: {
-    img: "mainimage/tomato.jpg",
+    img: "mainimage/tomato.avif",
     alt: "Tomato Paste",
     text: "That intense red! I heard traditional tomato paste is dried under the sun. But let's be real, the one I'm using probably came out of a factory."
   },
   flour: {
-    img: "mainimage/Flourtexture.jpg",
+    img: "mainimage/Flourtexture.avif",
     alt: "Flour",
     text: "Could've been bread. Guess you weren't that lucky."
   },
   chickenbroth: {
-    img: "mainimage/chicken.jpg",
+    img: "mainimage/chicken.avif",
     alt: "Chicken Broth",
     text: "Sometimes I wonder why it's even needed. Other times, it's the best seasoning ever. Truth is, I used Chinese style chicken stock. So maybe my cottage pie has a hint of wonton soup in there. Who knows."
   },
   peeler: {
-    img: "mainimage/peeled potato.jpg",
+    img: "mainimage/peeled potato.avif",
     alt: "Peeler",
     text: "Almost lost a hand in the process, but I made it through peeling the potatoes. What a blessing."
   },
   masher: {
-    img: "mainimage/mashedtexture.jpg",
+    img: "mainimage/mashedtexture.avif",
     alt: "Masher",
     text: "Make sure to cook your potatoes all the way through. It's better for you. But honestly, as long as you have a masher, anyone can make the best mashed potatoes in the world."
   },
   garlic: {
-    img: "mainimage/garlicp.jpg",
+    img: "mainimage/garlicp.avif",
     alt: "galic",
     text: "Honestly, one of the best powders out there. I don't know what I'd do without it. It's basically a foundation of everything I cook. So... Garlic?"
   },
   butter: {
-    img: "mainimage/buttwet.jpg",
+    img: "mainimage/buttwet.avif",
     alt: "butter",
     text: "You can never have too much butter. And cream, too."
   },
   eggs: {
-    img: "starterimage/eggs.jpg",
+    img: "starterimage/eggs.avif",
     alt: "eggs",
     text: "Does using different colored eggs change the taste?"
   },
