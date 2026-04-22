@@ -55,7 +55,7 @@ var popupData = {
     text: "Does using different colored eggs change the taste?"
   },
   bacon: {
-    img: "starterimage/pig.jpg",
+    img: "starterimage/pig.avif",
     alt: "bacon",
     text: "Pigs are smarter than dogs and can be trained to play video games. They also have excellent long-term memory and can remember things for years. So yeah, they'd probably remember if you didn't share your snacks."
   }
