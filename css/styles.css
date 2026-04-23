@@ -414,6 +414,12 @@ header a {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 650px) {
+  .footer-chef {
+    height: 20rem;
+  }
+}
+
 footer{
   position: relative;
   height: auto;
