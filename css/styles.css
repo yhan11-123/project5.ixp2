@@ -134,6 +134,7 @@ header a {
  padding: 3rem 3rem;
  margin: 0 auto;
  place-items: center;
+ text-align: center;
 }
 
 .vertical-menu a {
