@@ -21,51 +21,24 @@ header {
   position: relative;
 }
 
-.title-wrapper {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2.5rem;
+.chicken-track {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 10;
 }
 
-.spoon-svg {
-  cursor: pointer;
-  height: 4.5rem;
-  width: auto;
-  transform: rotate(-20deg);
-  transform-origin: 50% 50%;
-  user-select: none;
-  flex-shrink: 0;
-  filter: drop-shadow(2px 3px 4px rgba(255,75,0,0.25));
-  transition: filter 0.15s;
+.chicken-walker {
+  display: block;
+  width: 45px;
+  height: auto;
+  animation: chicken-bob 0.4s ease-in-out infinite;
 }
 
-.spoon-svg:hover {
-  filter: drop-shadow(3px 4px 8px rgba(255,75,0,0.5));
-}
-
-@media screen and (min-width: 650px) {
-  .spoon-svg {
-    height: 6.5rem;
-  }
-}
-
-.title.wobbling {
-  animation: pudding-wobble 0.9s ease-out;
-  display: inline-block;
-}
-
-@keyframes pudding-wobble {
-  0%   { transform: scale(1,1)    skewX(0deg); }
-  8%   { transform: scale(1.15,0.8) skewX(-6deg); }
-  18%  { transform: scale(0.88,1.18) skewX(5deg); }
-  30%  { transform: scale(1.08,0.92) skewX(-3deg); }
-  42%  { transform: scale(0.96,1.06) skewX(2deg); }
-  54%  { transform: scale(1.03,0.97) skewX(-1deg); }
-  65%  { transform: scale(0.99,1.02) skewX(0.5deg); }
-  76%  { transform: scale(1.01,0.99) skewX(0deg); }
-  88%  { transform: scale(1,1)    skewX(0deg); }
-  100% { transform: scale(1,1)    skewX(0deg); }
+@keyframes chicken-bob {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-5px); }
 }
 
 header a {
@@ -403,6 +376,34 @@ header a {
   @media screen and (min-width: 650px) {
       font-size: 1.2rem;
     }
+}
+
+/* page navigation */
+.page-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1.5rem;
+}
+
+.page-nav a,
+.page-nav span {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.page-nav__prev { text-align: left; }
+.page-nav__home { text-align: center; }
+.page-nav__next { text-align: right; }
+
+@media screen and (min-width: 650px) {
+  .page-nav {
+    padding: 2rem 3rem;
+    font-size: 1.25rem;
+  }
 }
 
 /* footer */

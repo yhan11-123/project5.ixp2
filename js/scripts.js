@@ -55,7 +55,7 @@ var popupData = {
     text: "Does using different colored eggs change the taste?"
   },
   bacon: {
-    img: "starterimage/pig.avif",
+    img: "starterimage/pig.jpg",
     alt: "bacon",
     text: "Pigs are smarter than dogs and can be trained to play video games. They also have excellent long-term memory and can remember things for years. So yeah, they'd probably remember if you didn't share your snacks."
   }
@@ -71,55 +71,40 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Spoon parabolic hit (index.html only)
-  var spoon = document.getElementById('spoon');
-  var siteTitle = document.getElementById('siteTitle');
-  if (spoon && siteTitle) {
-    var isAnimating = false;
+  // Chicken border walk
+  document.querySelectorAll('.chicken-track').forEach(function(track) {
+    var header = track.closest('header');
+    var pos = -50;
+    var direction = 1;
+    var speed = 80;
+    var lastTime = null;
 
-    spoon.addEventListener('click', function() {
-      if (isAnimating) return;
-      isAnimating = true;
+    track.style.transform = 'scaleX(-1)'; // SVG faces left; flip so it faces right at start
 
-      var spoonRect = spoon.getBoundingClientRect();
-      var titleRect = siteTitle.getBoundingClientRect();
+    function step(timestamp) {
+      if (!lastTime) lastTime = timestamp;
+      var dt = Math.min((timestamp - lastTime) / 1000, 0.05);
+      lastTime = timestamp;
 
-      // Distance from spoon center to title center
-      var dx = (titleRect.left + titleRect.width / 2) - (spoonRect.left + spoonRect.width / 2);
+      pos += speed * direction * dt;
+      var maxX = header.offsetWidth + 10;
 
-      // Parabolic trajectory keyframes
-      var keyframes = [
-        { transform: 'translate(0px, 0px) rotate(-20deg)',                          offset: 0    },
-        { transform: 'translate(-18px, -90px) rotate(-75deg)',                      offset: 0.22 },
-        { transform: 'translate(' + (dx * 0.4) + 'px, -65px) rotate(-25deg)',      offset: 0.47 },
-        { transform: 'translate(' + dx + 'px, 0px) rotate(28deg)',                  offset: 0.65 }, // collision
-        { transform: 'translate(' + (dx * 0.72) + 'px, -28px) rotate(8deg)',       offset: 0.78 },
-        { transform: 'translate(' + (dx * 0.18) + 'px, -10px) rotate(-14deg)',     offset: 0.91 },
-        { transform: 'translate(0px, 0px) rotate(-20deg)',                          offset: 1    }
-      ];
+      if (direction === 1 && pos >= maxX) {
+        pos = maxX;
+        direction = -1;
+        track.style.transform = 'scaleX(1)';  // face left to walk back
+      } else if (direction === -1 && pos <= -50) {
+        pos = -50;
+        direction = 1;
+        track.style.transform = 'scaleX(-1)'; // face right to walk forward
+      }
 
-      var duration = 780;
-      var hitTime = duration * 0.65; // collision point
+      track.style.left = pos + 'px';
+      requestAnimationFrame(step);
+    }
 
-      var anim = spoon.animate(keyframes, {
-        duration: duration,
-        easing: 'ease-in-out'
-      });
-
-      // Start pudding wobble at collision point
-      setTimeout(function() {
-        siteTitle.classList.add('wobbling');
-      }, hitTime);
-
-      anim.addEventListener('finish', function() {
-        isAnimating = false;
-      });
-
-      siteTitle.addEventListener('animationend', function() {
-        siteTitle.classList.remove('wobbling');
-      }, { once: true });
-    });
-  }
+    requestAnimationFrame(step);
+  });
 
   // Popup logic
   var overlay   = document.getElementById('popupOverlay');
