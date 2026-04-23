@@ -131,27 +131,24 @@ header a {
 /* vertical menu */
 
 .vertical-menu {
- padding: 3rem 3rem;
- margin: 0 auto;
- place-items: center;
- text-align: center;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: 650px) {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 .vertical-menu a {
   padding: 1.5rem;
-  margin: 2rem 1rem;
+  margin: 1rem;
   font-size: 1.5rem;
   font-weight: 700;
-  color: --text;
-  display: block;
+  color: var(--text);
   text-decoration: none;
-
-
-    @media screen and (min-width: 650px) {
-    display:inline;
-    align-items: center;
-
-    }
 }
 
 
