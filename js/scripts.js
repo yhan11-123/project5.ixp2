@@ -58,6 +58,36 @@ var popupData = {
     img: "starterimage/pig.jpg",
     alt: "bacon",
     text: "Pigs are smarter than dogs and can be trained to play video games. They also have excellent long-term memory and can remember things for years. So yeah, they'd probably remember if you didn't share your snacks."
+  },
+  oreo: {
+    img: "dessertimage/oreopop.avif",
+    alt: "oreo",
+    text: "To dunk or not to dunk — that is the question."
+  },
+  butterd: {
+    img: "dessertimage/cow.avif",
+    alt: "butterd",
+    text: "Grass-fed butter is richer and more flavorful than grain-fed — and it actually changes with the seasons. Spring butter gets that deep yellow color from all the beta-carotene in fresh grass, and the flavor gets way more complex too."
+  },
+  chickenass: {
+    img: "dessertimage/chickenass.avif",
+    alt: "chickenass",
+    text: "Did you know eggs come out of the same hole as chicken poop? Bon appétit."
+  },
+  creamcheesebagel: {
+    img: "dessertimage/bagel.avif",
+    alt: "creamcheesebagel",
+    text: "This cake has so much cream cheese in it. Honestly, at this point, why not just put the cake inside the bagel?"
+  },
+  cocoapowder: {
+    img: "dessertimage/cocoatexture.avif",
+    alt: "cocoapowder",
+    text: "Make sure you're not using the sweetened kind."
+  },
+  cacaotree: {
+    img: "dessertimage/cacaotree.avif",
+    alt: "cacaotree",
+    text: "Chocolate comes from the cacao tree, scientifically known as Theobroma Cacao. In Greek, Theo means God and broma means food — so literally, 'Food of the Gods.' An 18th century botanist named it that, and honestly? He was just right."
   }
 };
 // ─────────────────────────────────────────────
