@@ -88,6 +88,11 @@ var popupData = {
     img: "dessertimage/cacaotree.avif",
     alt: "cacaotree",
     text: "Chocolate comes from the cacao tree, scientifically known as Theobroma Cacao. In Greek, Theo means God and broma means food — so literally, 'Food of the Gods.' An 18th century botanist named it that, and honestly? He was just right."
+  },
+  heavycream: {
+    img: "mainimage/heavycream.avif",
+    alt: "heavycream",
+    text: "If your heavy cream isn't cold enough when you whip it, it won't turn into whipped cream — it'll just become butter. No fluffy peaks, no redemption arc. Just butter. Temperature is everything, and heavy cream does not forgive mistakes."
   }
 };
 // ─────────────────────────────────────────────

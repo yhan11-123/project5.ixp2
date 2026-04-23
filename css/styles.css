@@ -407,7 +407,15 @@ header a {
 }
 
 /* footer */
+.footer-chef {
+  display: block;
+  height: 30rem;
+  width: auto;
+  margin: 0 auto;
+}
+
 footer{
+  position: relative;
   height: auto;
   width: auto;
   font-family: "Montserrat", sans-serif;
